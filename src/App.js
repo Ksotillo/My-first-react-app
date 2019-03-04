@@ -1,34 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import Home from './pages/Home';
 import './App.css';
-import Title, { hola } from './components/Title';
 class App extends Component {
+	
+	// constructor(props){
+	// 	super(props);
+
+		// this.state = {
+		// 	numero: 0
+		// };
+
+		// this.updateNumero = this.updateNumero.bind(this);
+	// }
+	// 	setInterval(() =>{
+	// 		this.setState({
+	// 			numero: this.state.numero + 1
+	// 		});
+	// 	}, 1000)
+	// }
+
+	// updateNumero(){
+	// 	this.setState({
+	// 		numero: this.state.numero + 1
+	// 	});
+	// }
+
+
+
+
 	render() {
     return (
-        <section>
-			<div>
-            	<div>
-					<Title></Title>
-    				<button>Crear cuenta gratuita</button>
-				<div>
-                	<ul>
-                		<li>
-                			<h3>Calificaciones con emociones</h3>
-                    		<p>Califica tus lugares con experiencias, no con números</p>
-            			</li>
-                		<li>
-                    		<h3>Calificaciones con emociones</h3>
-                			<p>Califica tus lugares con experiencias, no con números</p>
-                		</li>
-                		<li>
-                    		<h3>Calificaciones con emociones</h3>
-                			<p>Califica tus lugares con experiencias, no con números</p>
-                		</li>
-            		</ul>
-            		</div>
-            	</div>
-        	</div>
-        </section>
+        <MuiThemeProvider>
+			<Home></Home>
+        </MuiThemeProvider>
     	);
 	}
 }
